@@ -4,24 +4,115 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
-
-    <title>Bootstrap Layout E01</title>
+    <title>Bootstrap Layout & Navigation</title>
   </head>
   <body>
-    <h1>Hello, world!</h1>
+    <header class="bg-dark shadowb sticky-top">
+      <div class="container-fluid">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+          <div class="container-lg">
+            <a class="navbar-brand" href="#">Navbar</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+              <ul class="navbar-nav">
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Features</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Pricing</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Social</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </header>
 
-    <!-- Optional JavaScript; choose one of the two! -->
+    <section class="py-5">
+      <div class="container-lg">
+        <div class="row align-items-center">
+          <div class="col-12 mb-4">
+            <h2 class="h2 text-center text-uppercase text-info">
+              <span class="border-bottom border-2 border-secondary pb-2">Features</span>
+            </h2>
+          </div>
+          <div class="col-12 mb-4">
+            <p class="text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae, harum modi? Obcaecati reprehenderit quae alias modi! Dolorum pariatur at impedit officia ipsa cum! Reiciendis est reprehenderit nulla, fuga quisquam pariatur!</p>
+          </div>
+          <!-- all columns need to add up to 12 -->
+          <!-- col-md -> starts at 768px and takes your content and sits in a row. Anywhere below 767 will stack the content vertically -->
+          <div class="col-md-7 mb-4">
+            <h3 class="text-secondary">sub-heading</h3>
+           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus eaque enim modi corporis nesciunt distinctio! Totam, nam adipisci, esse dolore corporis placeat aperiam quam tempora nulla praesentium possimus molestias labore. </p>
+            <a class="btn btn-outline-info btn-lg" href="#">Read More ></a>
+          </div>
+          <div class="col-md-5">
+            <img class="img-fluid rounded" src="img/bootstrap-social.png" alt="bootstrap img" />
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <section class="py-5">
+      <!-- 
+        4 columns 
+        on small to large screens 2 columns will sit side-by-side take 50% of the available space while the columns sit below, also taking up 50% of the available space.
+        On large screens all columns will sit in a row.
+      -->
+      <div class="container-lg">
+        <div class="row">
+          <div class="col-6 col-lg-3">
+            <div class="d-flex">
+              <svg xmlns="http://www.w3.org/2000/svg" width="2rem" height="2rem" fill="currentColor" class="bi bi-behance text-info" viewBox="0 0 16 16">
+                <path d="M4.654 3c.461 0 .887.035 1.278.14.39.07.711.216.996.391.286.176.497.426.641.747.14.32.216.711.216 1.137 0 .496-.106.922-.356 1.242-.215.32-.566.606-.997.817.606.176 1.067.496 1.348.922.281.426.461.957.461 1.563 0 .496-.105.922-.285 1.278a2.317 2.317 0 0 1-.782.887c-.32.215-.711.39-1.137.496a5.329 5.329 0 0 1-1.278.176L0 12.803V3h4.654zm-.285 3.978c.39 0 .71-.105.957-.285.246-.18.355-.497.355-.887 0-.216-.035-.426-.105-.567a.981.981 0 0 0-.32-.355 1.84 1.84 0 0 0-.461-.176c-.176-.035-.356-.035-.567-.035H2.17v2.31c0-.005 2.2-.005 2.2-.005zm.105 4.193c.215 0 .426-.035.606-.07.176-.035.356-.106.496-.216s.25-.215.356-.39c.07-.176.14-.391.14-.641 0-.496-.14-.852-.426-1.102-.285-.215-.676-.32-1.137-.32H2.17v2.734h2.305v.005zm6.858-.035c.286.285.711.426 1.278.426.39 0 .746-.106 1.032-.286.285-.215.46-.426.53-.64h1.74c-.286.851-.712 1.457-1.278 1.848-.566.355-1.243.566-2.06.566a4.135 4.135 0 0 1-1.527-.285 2.827 2.827 0 0 1-1.137-.782 2.851 2.851 0 0 1-.712-1.172c-.175-.461-.25-.957-.25-1.528 0-.531.07-1.032.25-1.493.18-.46.426-.852.747-1.207.32-.32.711-.606 1.137-.782a4.018 4.018 0 0 1 1.493-.285c.606 0 1.137.105 1.598.355.46.25.817.532 1.102.958.285.39.496.851.641 1.348.07.496.105.996.07 1.563h-5.15c0 .58.21 1.11.496 1.396zm2.24-3.732c-.25-.25-.642-.391-1.103-.391-.32 0-.566.07-.781.176-.215.105-.356.25-.496.39a.957.957 0 0 0-.25.497c-.036.175-.07.32-.07.46h3.196c-.07-.526-.25-.882-.497-1.132zm-3.127-3.728h3.978v.957h-3.978v-.957z"/>
+              </svg>
+              <h3 class="text-secondary ms-2">Behance</h3>
+          </div>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est exercitationem quidem sequi adipisci sed pariatur ipsa explicabo molestias maxime unde in, necessitatibus magnam illum magni harum earum! Esse, harum illo.</p>
+          </div>
+          <div class="col-6 col-lg-3">
+            <div class="d-flex">
+              <svg xmlns="http://www.w3.org/2000/svg" width="2rem" height="2rem" fill="currentColor" class="bi bi-slack text-info" viewBox="0 0 16 16">
+                <path d="M3.362 10.11c0 .926-.756 1.681-1.681 1.681S0 11.036 0 10.111C0 9.186.756 8.43 1.68 8.43h1.682v1.68zm.846 0c0-.924.756-1.68 1.681-1.68s1.681.756 1.681 1.68v4.21c0 .924-.756 1.68-1.68 1.68a1.685 1.685 0 0 1-1.682-1.68v-4.21zM5.89 3.362c-.926 0-1.682-.756-1.682-1.681S4.964 0 5.89 0s1.68.756 1.68 1.68v1.682H5.89zm0 .846c.924 0 1.68.756 1.68 1.681S6.814 7.57 5.89 7.57H1.68C.757 7.57 0 6.814 0 5.89c0-.926.756-1.682 1.68-1.682h4.21zm6.749 1.682c0-.926.755-1.682 1.68-1.682.925 0 1.681.756 1.681 1.681s-.756 1.681-1.68 1.681h-1.681V5.89zm-.848 0c0 .924-.755 1.68-1.68 1.68A1.685 1.685 0 0 1 8.43 5.89V1.68C8.43.757 9.186 0 10.11 0c.926 0 1.681.756 1.681 1.68v4.21zm-1.681 6.748c.926 0 1.682.756 1.682 1.681S11.036 16 10.11 16s-1.681-.756-1.681-1.68v-1.682h1.68zm0-.847c-.924 0-1.68-.755-1.68-1.68 0-.925.756-1.681 1.68-1.681h4.21c.924 0 1.68.756 1.68 1.68 0 .926-.756 1.681-1.68 1.681h-4.21z"/>
+              </svg>
+              <h3 class="text-secondary ms-2">Slack</h3>
+            </div>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem blanditiis ipsa obcaecati saepe ad praesentium accusantium quod ex id eaque debitis reprehenderit facere cupiditate, amet aut dolorum reiciendis omnis non.</p>
+          </div>
+          <div class="col-6 col-lg-3">
+            <div class="d-flex">
+            <svg xmlns="http://www.w3.org/2000/svg" width="2rem" height="2rem" fill="currentColor" class="bi bi-medium text-info" viewBox="0 0 16 16">
+              <path d="M9.025 8c0 2.485-2.02 4.5-4.513 4.5A4.506 4.506 0 0 1 0 8c0-2.486 2.02-4.5 4.512-4.5A4.506 4.506 0 0 1 9.025 8zm4.95 0c0 2.34-1.01 4.236-2.256 4.236-1.246 0-2.256-1.897-2.256-4.236 0-2.34 1.01-4.236 2.256-4.236 1.246 0 2.256 1.897 2.256 4.236zM16 8c0 2.096-.355 3.795-.794 3.795-.438 0-.793-1.7-.793-3.795 0-2.096.355-3.795.794-3.795.438 0 .793 1.699.793 3.795z"/>
+            </svg>
+            <h3 class="text-secondary ms-2">Medium</h3>
+          </div>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem blanditiis ipsa obcaecati saepe ad praesentium accusantium quod ex id eaque debitis reprehenderit facere cupiditate, amet aut dolorum reiciendis omnis non.</p>
+          </div>
+          <div class="col-6 col-lg-3">
+            <div class="d-flex">
+              <svg xmlns="http://www.w3.org/2000/svg" width="2rem" height="2rem" fill="currentColor" class="bi bi-dribbble text-info" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M8 0C3.584 0 0 3.584 0 8s3.584 8 8 8c4.408 0 8-3.584 8-8s-3.592-8-8-8zm5.284 3.688a6.802 6.802 0 0 1 1.545 4.251c-.226-.043-2.482-.503-4.755-.217-.052-.112-.096-.234-.148-.355-.139-.33-.295-.668-.451-.99 2.516-1.023 3.662-2.498 3.81-2.69zM8 1.18c1.735 0 3.323.65 4.53 1.718-.122.174-1.155 1.553-3.584 2.464-1.12-2.056-2.36-3.74-2.551-4A6.95 6.95 0 0 1 8 1.18zm-2.907.642A43.123 43.123 0 0 1 7.627 5.77c-3.193.85-6.013.833-6.317.833a6.865 6.865 0 0 1 3.783-4.78zM1.163 8.01V7.8c.295.01 3.61.053 7.02-.971.199.381.381.772.555 1.162l-.27.078c-3.522 1.137-5.396 4.243-5.553 4.504a6.817 6.817 0 0 1-1.752-4.564zM8 14.837a6.785 6.785 0 0 1-4.19-1.44c.12-.252 1.509-2.924 5.361-4.269.018-.009.026-.009.044-.017a28.246 28.246 0 0 1 1.457 5.18A6.722 6.722 0 0 1 8 14.837zm3.81-1.171c-.07-.417-.435-2.412-1.328-4.868 2.143-.338 4.017.217 4.251.295a6.774 6.774 0 0 1-2.924 4.573z"/>
+                <h3 class="text-secondary ms-2">Dribble</h3>
+              </svg>
+            </div>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem blanditiis ipsa obcaecati saepe ad praesentium accusantium quod ex id eaque debitis reprehenderit facere cupiditate, amet aut dolorum reiciendis omnis non.</p>
+          </div>
+        </div>
+      </div>
+    </section>
 
-    <!-- Option 1: Bootstrap Bundle with Popper -->
+    
+  
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
-
-    <!-- Option 2: Separate Popper and Bootstrap JS -->
-    <!--
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js" integrity="sha384-SR1sx49pcuLnqZUnnPwx6FCym0wLsk5JZuNx2bPPENzswTNFaQU1RDvt3wT4gWFG" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.min.js" integrity="sha384-j0CNLUeiqtyaRmlzUHCPZ+Gy5fQu0dQ6eZ/xAww941Ai1SxSY+0EQqNXNE6DZiVc" crossorigin="anonymous"></script>
-    -->
   </body>
 </html>
