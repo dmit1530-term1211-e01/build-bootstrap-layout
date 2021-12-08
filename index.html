@@ -17,19 +17,19 @@
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
               <ul class="navbar-nav">
                 <li class="nav-item">
                   <a class="nav-link active" aria-current="page" href="#">Home</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#">Features</a>
+                  <a class="nav-link" href="#features">Features</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#">Pricing</a>
+                  <a class="nav-link" href="#social">Social</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#">Social</a>
+                  <a class="nav-link" href="#pricing">Pricing</a>
                 </li>
               </ul>
             </div>
@@ -38,10 +38,52 @@
       </div>
     </header>
 
-    <section class="py-5">
+    <!-- Carousel - based of the height of your images -->
+    <section>
+      <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="img/aurora-borealis.jpg" class="d-block w-100" alt="Northern Lights">
+            <div class="carousel-caption">
+              <h2>Banner Heading</h2>
+              <p>Some promotional content</p>
+              <a class="btn btn-light" href="#">Learn More</a>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="img/nebula.jpg" class="d-block w-100" alt="Nebula">
+            <div class="carousel-caption">
+              <h2>Banner Heading</h2>
+              <p>Some promotional content</p>
+              <a class="btn btn-light" href="#">Learn More</a>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="img/ocean-sunset.jpg" class="d-block w-100" alt="Ocean sunset">
+            <div class="carousel-caption">
+              <h2>Banner Heading</h2>
+              <p>Some promotional content</p>
+              <a class="btn btn-light" href="#">Learn More</a>
+            </div>
+          </div>
+        </div>
+        <!-- controls (left/right arrows)-->
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </section>
+
+    <!-- 2 column layout 60/40 layout -->
+    <section class="py-5" id="features">
       <div class="container-lg">
         <div class="row align-items-center">
-          <div class="col-12 mb-4">
+          <div class="col-12 mb-5">
             <h2 class="h2 text-center text-uppercase text-info">
               <span class="border-bottom border-2 border-secondary pb-2">Features</span>
             </h2>
@@ -63,7 +105,8 @@
       </div>
     </section>
     
-    <section class="py-5">
+    <!-- 4 column layout on large screen and 2 column layout (quadrant layout) on small - med sized screens-->
+    <section class="py-5" id="social">
       <!-- 
         4 columns 
         on small to large screens 2 columns will sit side-by-side take 50% of the available space while the columns sit below, also taking up 50% of the available space.
@@ -71,6 +114,11 @@
       -->
       <div class="container-lg">
         <div class="row">
+          <div class="col-12 mb-5">
+            <h2 class="h2 text-center text-uppercase text-info">
+              <span class="border-bottom border-2 border-secondary pb-2">Socials</span>
+            </h2>
+          </div>
           <div class="col-6 col-lg-3">
             <div class="d-flex">
               <svg xmlns="http://www.w3.org/2000/svg" width="2rem" height="2rem" fill="currentColor" class="bi bi-behance text-info" viewBox="0 0 16 16">
@@ -106,6 +154,67 @@
               </svg>
             </div>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem blanditiis ipsa obcaecati saepe ad praesentium accusantium quod ex id eaque debitis reprehenderit facere cupiditate, amet aut dolorum reiciendis omnis non.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3 column layout -->
+    <section class="py-5" id="pricing">
+      <div class="container-lg">
+        <div class="row">
+          <div class="col-12 mb-5">
+            <h2 class="h2 text-center text-uppercase text-info">
+              <span class="border-bottom border-2 border-secondary pb-2">Pricing Cards</span>
+            </h2>
+          </div>
+          <!-- card layout area -->
+          <!-- 3 column layout - on small screens the cards will stack (767 and down) and med to large screen the cards will sit side-by-side. -->
+          <!-- 12 column grid, and you have 3 cards (taking up equal spacing). So divide the # of cards/columns by your grid (12/3) = 4 -->
+          <div class="col-md-4 mb-3 order-1 order-md-0">
+            <div class="card text-center shadow-sm">
+              <div class="card-body">
+                <h3>Starter Plan</h3>
+                <p>$8/month</p>
+                <p>content here</p>
+                <ul class="list-inline">
+                  <li>10 Projects</li>
+                  <li>5 Pages</li>
+                </ul>
+                <a class="btn btn-success" href="#">Choose Plan</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 mb-3 order-0 order-md-1">
+            <div class="card text-center shadow-sm border-3 border-success">
+              <div class="card-header bg-success text-white">
+                <p class="mb-0">Best Plan!</p>
+              </div>
+              <div class="card-body">
+                <h3>Best Plan</h3>
+                <p>$10/month</p>
+                <p>content here</p>
+                <ul class="list-inline">
+                  <li>30 Projects</li>
+                  <li>20 Pages</li>
+                </ul>
+                <a class="btn btn-success" href="#">Choose Plan</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 mb-3 order-2">
+            <div class="card text-center shadow-sm">
+              <div class="card-body">
+                <h3>Premium Plan</h3>
+                <p>$15/month</p>
+                <p>content here</p>
+                <ul class="list-inline">
+                  <li>20 Projects</li>
+                  <li>10 Pages</li>
+                </ul>
+                <a class="btn btn-success" href="#">Choose Plan</a>
+              </div>
+            </div>
           </div>
         </div>
       </div>
